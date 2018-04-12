@@ -151,4 +151,10 @@
         </plugins>
     </build>
 
+	<developers>
+		<developer>
+			<name>Felipe Nunes</name>
+			<email>felipeapn@yahoo.com.br</email>
+		</developer>
+	</developers>
 </project>
