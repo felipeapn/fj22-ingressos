@@ -27,6 +27,7 @@ public class SalaController {
 
     @GetMapping({"/admin/sala", "/admin/sala/{id}"})
     public ModelAndView form(@PathVariable("id")Optional<Integer> id, Sala sala){
+    	
         ModelAndView modelAndView = new ModelAndView("sala/sala");
 
         if (id.isPresent()){
@@ -81,7 +82,7 @@ public class SalaController {
 
         Sala sala = salaDao.findOne(id);
         modelAndView.addObject("sala", sala);
-        modelAndView.addObject("sessoes", sessaoDao.buscaSessoesDaSala(sala));
+        //modelAndView.addObject("sessoes", sessaoDao.buscaSessoesDaSala(sala));
         
         return modelAndView;
     }
